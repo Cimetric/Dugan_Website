@@ -46,97 +46,7 @@ function useIsMobile() {
   return isMobile;
 }
 
-// --- Helper: persist uploaded images as data URLs in localStorage ---
-function useStoredImage(key, fallbackUrl) {
-  const [src, setSrc] = useState(() => {
-    try {
-      return localStorage.getItem(key) || fallbackUrl;
-    } catch (e) {
-      return fallbackUrl;
-    }
-  });
 
-  useEffect(() => {
-    try {
-      if (src && src.startsWith("data:")) localStorage.setItem(key, src);
-    } catch (e) {}
-  }, [key, src]);
-
-  return [src, setSrc];
-}
-
-function ImageUploader({ storageKey, fallback, alt, isAdmin = false }) {
-  const [src, setSrc] = useStoredImage(storageKey, fallback);
-
-  function handleFile(e) {
-    const f = e.target.files?.[0];
-    if (!f) return;
-    const reader = new FileReader();
-    reader.onload = () => setSrc(reader.result);
-    reader.readAsDataURL(f);
-  }
-
-  function reset() {
-    try { localStorage.removeItem(storageKey); } catch (e) {}
-    setSrc(fallback);
-  }
-
-  return (
-    <div style={{ marginBottom: "1rem" }}>
-      <img
-        src={src}
-        alt={alt}
-        style={{
-          width: "100%",
-          height: "14rem",
-          objectFit: "cover",
-          borderRadius: "0.5rem",
-          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-        }}
-      />
-      {isAdmin && (
-        <div style={{ display: "flex", gap: "0.5rem", marginTop: "0.5rem" }}>
-          <label
-            style={{
-              display: "inline-block",
-              backgroundColor: "#dc2626",
-              color: "white",
-              padding: "0.5rem 0.75rem",
-              borderRadius: "0.25rem",
-              cursor: "pointer",
-              fontSize: "0.875rem",
-              border: "none",
-              fontWeight: "500",
-            }}
-            onMouseEnter={(e) => (e.target.style.backgroundColor = "#b91c1c")}
-            onMouseLeave={(e) => (e.target.style.backgroundColor = "#dc2626")}
-          >
-            Upload Photo
-            <input type="file" accept="image/*" onChange={handleFile} style={{ display: "none" }} />
-          </label>
-          <button
-            onClick={reset}
-            style={{
-              display: "inline-block",
-              backgroundColor: "#e5e7eb",
-              color: "black",
-              padding: "0.5rem 0.75rem",
-              borderRadius: "0.25rem",
-              fontSize: "0.875rem",
-              border: "none",
-              cursor: "pointer",
-              fontWeight: "500",
-            }}
-            onMouseEnter={(e) => (e.target.style.backgroundColor = "#d1d5db")}
-            onMouseLeave={(e) => (e.target.style.backgroundColor = "#e5e7eb")}
-          >
-            Reset
-          </button>
-        </div>
-      )}
-    </div>
-  );
-}
 
 function Header() {
   return (
@@ -769,7 +679,17 @@ function AboutPage() {
         </div>
 
         <div>
-          <ImageUploader storageKey="sg_about_team" fallback={aboutImg} alt="Our team" isAdmin={isAdmin} />
+          <img
+            src={aboutImg}
+            alt="Our team"
+            style={{
+              width: "100%",
+              height: "14rem",
+              objectFit: "cover",
+              borderRadius: "0.5rem",
+              boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+            }}
+          />
         </div>
       </div>
     </main>
