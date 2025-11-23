@@ -680,7 +680,7 @@ function ServicesPage() {
       />
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "3rem 1.5rem", position: "relative" }}>
       <h1 style={{ fontSize: "clamp(1.75rem, 5vw, 2.5rem)", fontWeight: "bold", marginBottom: "0.5rem", color: "black" }}>Services</h1>
-      <p style={{ marginTop: "0.5rem", color: textColor, fontSize: "clamp(1rem, 2.5vw, 1.125rem)" }}>We offer a wide range of moving and related services. Below are the details.</p>
+      <p style={{ marginTop: "0.5rem", color: "black", fontSize: "clamp(1rem, 2.5vw, 1.125rem)" }}>We offer a wide range of moving and related services. Below are the details.</p>
 
       <div
         style={{
@@ -830,7 +830,7 @@ function ContactPage() {
         }}
       >
       <h1 style={{ fontSize: "1.875rem", fontWeight: "bold", marginBottom: "0.5rem", color: "black" }}>Contact</h1>
-      <p style={{ marginTop: "0.5rem", color: textColor }}>
+      <p style={{ marginTop: "0.5rem", color: "black" }}>
         Call us at{" "}
         <a href="tel:5412648502" style={{ color: "#dc2626", fontWeight: "600", textDecoration: "none" }}>
           541-264-8502
