@@ -679,10 +679,8 @@ function ServicesPage() {
         }}
       />
       <div style={{ maxWidth: "1280px", margin: "0 auto", padding: "3rem 1.5rem", position: "relative" }}>
-      <div style={{ backgroundColor: "rgba(0, 0, 0, 0.9)", padding: "clamp(1.5rem, 4vw, 2rem)", borderRadius: "0.75rem", marginBottom: "2rem" }}>
-        <h1 style={{ fontSize: "clamp(1.75rem, 5vw, 2.5rem)", fontWeight: "bold", marginBottom: "0.5rem", color: "#ef4444" }}>Services</h1>
-        <p style={{ marginTop: "0.5rem", color: "white", fontSize: "clamp(1rem, 2.5vw, 1.125rem)" }}>We offer a wide range of moving and related services. Below are the details.</p>
-      </div>
+      <h1 style={{ fontSize: "clamp(1.75rem, 5vw, 2.5rem)", fontWeight: "bold", marginBottom: "0.5rem", color: "black" }}>Services</h1>
+      <p style={{ marginTop: "0.5rem", color: textColor, fontSize: "clamp(1rem, 2.5vw, 1.125rem)" }}>We offer a wide range of moving and related services. Below are the details.</p>
 
       <div
         style={{
@@ -831,7 +829,7 @@ function ContactPage() {
           position: "relative",
         }}
       >
-      <h1 style={{ fontSize: "1.875rem", fontWeight: "bold", marginBottom: "0.5rem" }}>Contact</h1>
+      <h1 style={{ fontSize: "1.875rem", fontWeight: "bold", marginBottom: "0.5rem", color: "black" }}>Contact</h1>
       <p style={{ marginTop: "0.5rem", color: textColor }}>
         Call us at{" "}
         <a href="tel:5412648502" style={{ color: "#dc2626", fontWeight: "600", textDecoration: "none" }}>
