@@ -31,6 +31,21 @@ function useDarkMode() {
   return isDark;
 }
 
+// --- Hook: Track mobile viewport for responsive behavior ---
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(() => {
+    return typeof window !== "undefined" && window.innerWidth < 768;
+  });
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return isMobile;
+}
+
 // --- Helper: persist uploaded images as data URLs in localStorage ---
 function useStoredImage(key, fallbackUrl) {
   const [src, setSrc] = useState(() => {
@@ -347,6 +362,7 @@ function Footer() {
 function HomePage() {
   const isAdmin = useAdmin();
   const isDark = useDarkMode();
+  const isMobile = useIsMobile();
   
   const textColor = isDark ? "#e5e7eb" : "#374151";
   const cardBg = isDark ? "#1f2937" : "white";
@@ -368,7 +384,7 @@ function HomePage() {
             backgroundImage: "url('/Newport Oregon Topographical map.png')",
             backgroundSize: "100%",
             backgroundPosition: "-100% -80%",
-            backgroundAttachment: "fixed",
+            backgroundAttachment: isMobile ? "scroll" : "fixed",
             filter: "saturate(0) brightness(1.15) contrast(0.9)",
             zIndex: -1,
           }}
@@ -623,6 +639,7 @@ function HomePage() {
 
 function ServicesPage() {
   const isDark = useDarkMode();
+  const isMobile = useIsMobile();
   const textColor = isDark ? "#e5e7eb" : "#374151";
   const cardBg = isDark ? "#1f2937" : "rgba(0, 0, 0, 0.75)";
   const cardBorder = isDark ? "#374151" : "#dc2626";
@@ -654,7 +671,7 @@ function ServicesPage() {
           bottom: 0,
           backgroundImage: `url('/Newport Oregon Topographical map.png')`,
           backgroundSize: "cover",
-          backgroundAttachment: "fixed",
+          backgroundAttachment: isMobile ? "scroll" : "fixed",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           filter: "saturate(0) brightness(1.25) contrast(0.8)",
@@ -764,6 +781,7 @@ function AboutPage() {
 function ContactPage() {
   const navigate = useNavigate();
   const isDark = useDarkMode();
+  const isMobile = useIsMobile();
   const textColor = isDark ? "#e5e7eb" : "#374151";
   const inputBg = isDark ? "#1f2937" : "white";
   const inputBorder = isDark ? "#374151" : "#d1d5db";
@@ -798,7 +816,7 @@ function ContactPage() {
           bottom: 0,
           backgroundImage: `url('/Newport Oregon Topographical map.png')`,
           backgroundSize: "cover",
-          backgroundAttachment: "fixed",
+          backgroundAttachment: isMobile ? "scroll" : "fixed",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           filter: "saturate(0) brightness(1.25) contrast(0.8)",
