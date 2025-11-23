@@ -536,7 +536,7 @@ function HomePage() {
           padding: "3rem 1.5rem",
         }}
       >
-        <h2 style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "0.5rem" }}>What we do</h2>
+        <h2 style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "0.5rem", color: "black" }}>What we do</h2>
 
         <div
           style={{
