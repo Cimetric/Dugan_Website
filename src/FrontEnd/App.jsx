@@ -291,7 +291,7 @@ function HomePage() {
             left: 0,
             right: 0,
             bottom: 0,
-            backgroundImage: "url('/Newport Oregon Topographical map.png')",
+            backgroundImage: "url('/newport-oregon-map.png')",
             backgroundSize: "100%",
             backgroundPosition: "-100% -80%",
             backgroundAttachment: isMobile ? "scroll" : "fixed",
@@ -579,7 +579,7 @@ function ServicesPage() {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: `url('/Newport Oregon Topographical map.png')`,
+          backgroundImage: `url('/newport-oregon-map.png')`,
           backgroundSize: "cover",
           backgroundAttachment: isMobile ? "scroll" : "fixed",
           backgroundRepeat: "no-repeat",
@@ -664,7 +664,7 @@ function AboutPage() {
       >
         <div>
           <p style={{ color: textColor }}>
-            Based in Newport, Oregon, Strong Guys's LLC exists to take the pain out of moving. Our team combines experience, care, and the right equipment to move your belongings safely and on time. We serve a 150-mile radius and handle residential, commercial, and specialty moves.
+            Based in Newport, Oregon, Strong Guys's LLC exists to take the pain out of moving. Our team combines experience, care, and the right equipment to move your belongings safely and on time. We serve all 50 states and provide deliveries to Canada.
           </p>
 
           <h3 style={{ marginTop: "1rem", fontWeight: "bold" }}>Why choose us</h3>
@@ -732,7 +732,7 @@ function ContactPage() {
           left: 0,
           right: 0,
           bottom: 0,
-          backgroundImage: `url('/Newport Oregon Topographical map.png')`,
+          backgroundImage: `url('/newport-oregon-map.png')`,
           backgroundSize: "cover",
           backgroundAttachment: isMobile ? "scroll" : "fixed",
           backgroundRepeat: "no-repeat",
@@ -868,8 +868,8 @@ function ContactPage() {
         </form>
 
         <div style={{ padding: "1rem", backgroundColor: isDark ? "#1f2937" : "#f9fafb", borderRadius: "0.25rem", border: `1px solid ${inputBorder}` }}>
-          <h3 style={{ fontWeight: "bold", marginTop: 0, color: textColor }}>Visit / Service Area</h3>
-          <p style={{ fontSize: "0.875rem", marginTop: "0.25rem" }}>Newport, OR — Serving within a 150-mile radius.</p>
+          <h3 style={{ fontWeight: "bold", marginTop: 0, color: textColor }}>Service Area</h3>
+          <p style={{ fontSize: "0.875rem", marginTop: "0.25rem" }}>Based in Newport, OR — Serving all 50 states and deliveries to Canada.</p>
           <div style={{ marginTop: "1rem" }}>
             <strong>Phone:</strong>{" "}
             <a href="tel:5412648502" style={{ color: "#583f3fff", textDecoration: "none" }}>
