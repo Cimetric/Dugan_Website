@@ -247,7 +247,7 @@ function Footer() {
       >
         <div>
           <div style={{ fontWeight: "bold" }}>Strong Guys's LLC</div>
-          <div style={{ fontSize: "0.875rem" }}>Based in Newport, OR — Serving a 150-mile radius</div>
+          <div style={{ fontSize: "0.875rem" }}>Based in Newport, OR — Serving all 50 states and deliveries to Canada</div>
           <div style={{ marginTop: "0.5rem" }}>
             Phone:{" "}
             <a href="tel:5412648502" style={{ color: "#ef4444", textDecoration: "none" }}>
@@ -314,7 +314,7 @@ function HomePage() {
           <div style={{ flex: 1, backgroundColor: "rgba(0, 0, 0, 0.9)", padding: "clamp(1.5rem, 5vw, 3rem)", borderRadius: "0.75rem", maxWidth: "600px" }}>
             <h1 style={{ fontSize: "clamp(2rem, 7vw, 3rem)", fontWeight: "900", margin: 0, color: "#ef4444", textShadow: "3px 3px 6px rgba(0,0,0,0.8)", letterSpacing: "-0.02em" }}>MOVING SUCKS!</h1>
             <p style={{ marginTop: "1.5rem", fontSize: "clamp(1rem, 3vw, 1.125rem)", color: "white", lineHeight: "1.6" }}>
-              Let <span style={{ fontWeight: "700", color: "#ef4444" }}>Strong Guys's LLC</span> handle the heavy lifting. Reliable, local movers serving Newport, OR and a 150-mile radius.
+              Let <span style={{ fontWeight: "700", color: "#ef4444" }}>Strong Guys's LLC</span> handle the heavy lifting. Reliable movers serving all 50 states and deliveries to Canada.
             </p>
             <div style={{ marginTop: "2rem", display: "flex", gap: "1rem", flexWrap: "wrap" }}>
               <Link
