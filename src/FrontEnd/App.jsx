@@ -256,8 +256,8 @@ function Footer() {
           </div>
           <div>
             Email:{" "}
-            <a href="mailto:strongguysmovers@gmail.com" style={{ color: "#ef4444", textDecoration: "none" }}>
-              strongguysmovers@gmail.com
+            <a href="mailto:strongguysmoversschedule@gmail.com" style={{ color: "#ef4444", textDecoration: "none" }}>
+              strongguysmoversschedule@gmail.com
             </a>
           </div>
         </div>
@@ -714,7 +714,7 @@ function ContactPage() {
     e.preventDefault();
     const subject = encodeURIComponent("Website Quote Request - Strong Guys's LLC");
     const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\n\n${message}`);
-    window.location.href = `mailto:strongguysmovers@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:strongguysmoversschedule@gmail.com?subject=${subject}&body=${body}`;
     navigate("/");
   }
 
@@ -877,8 +877,8 @@ function ContactPage() {
             </a>
             <br />
             <strong>Email:</strong>{" "}
-            <a href="mailto:strongguysmovers@gmail.com" style={{ color: "#dc2626", textDecoration: "none" }}>
-              strongguysmovers@gmail.com
+            <a href="mailto:strongguysmoversschedule@gmail.com" style={{ color: "#dc2626", textDecoration: "none" }}>
+              strongguysmoversschedule@gmail.com
             </a>
           </div>
 
@@ -926,3 +926,4 @@ export default function App() {
     </Router>
   );
 }
+
