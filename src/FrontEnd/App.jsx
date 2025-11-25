@@ -292,7 +292,7 @@ function HomePage() {
             right: 0,
             bottom: 0,
             backgroundImage: "url('/newport-oregon-map.png')",
-            backgroundSize: "95%",
+            backgroundSize: "99%",
             backgroundPosition: "-100% -80%",
             backgroundAttachment: isMobile ? "scroll" : "fixed",
             filter: "saturate(0) brightness(1.15) contrast(0.9)",
